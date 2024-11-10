@@ -1,4 +1,6 @@
 #include <bits/stdc++.h>
+#include <fstream>
+
 using namespace std;
 
 class addtask {
@@ -19,6 +21,8 @@ public:
 int main() {
     vector<addtask> tasks;
     int choice;
+                            ofstream MyFile("filename.txt");
+
 
     do {
         cout << "1. Add task" << endl;
@@ -48,6 +52,8 @@ int main() {
                 tasks.push_back(myobj);
                 cout << "Task added successfully!" << endl;
                 break;
+
+
             }
             case 2: {
                 if (tasks.empty()) {
@@ -131,13 +137,37 @@ int main() {
                 cin.ignore();  // Ignore leftover newline
                 break;
             }
+
+            
             case 6: {
                 cout << "Exiting..." << endl;
                 break;
             }
+            
+            case 7: {
+
+    for (int i=0; i<tasks.size(); i++) {
+
+                  MyFile <<            
+                 tasks[0].name << " (status - " << tasks[i].status << ")" << endl
+                         << "Description: " << tasks[i].taskdescription << endl
+                         << "Due Date: " << tasks[i].duedate << endl << endl;
+                
+
+                     }
+                                         MyFile.close();
+
+                    break;
+}
+
             default:
                 cout << "Invalid choice. Please try again." << endl;
         }
+
+
+
+
+  
 
     } while (choice != 6);
 
