@@ -9,7 +9,7 @@ class Account {
 
   
 public :
-    string name;
+    string name; 
     string accNum;
 
 private :
