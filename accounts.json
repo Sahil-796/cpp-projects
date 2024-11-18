@@ -1,0 +1,23 @@
+[
+    {
+        "accNum": "0",
+        "accType": "savings",
+        "balance": 8900,
+        "name": "sahil",
+        "password": "0000"
+    },
+    {
+        "accNum": "3069251074",
+        "accType": "savings",
+        "balance": 0,
+        "name": "s",
+        "password": "2222"
+    },
+    {
+        "accNum": "0461145486",
+        "accType": "current",
+        "balance": 50000000,
+        "name": "neev",
+        "password": "1234"
+    }
+]
