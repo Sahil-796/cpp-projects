@@ -290,6 +290,9 @@ int main() {
                     if (checkAccountNum == accounts[i].accNum)
                     {   
                         found = 1;
+
+                        for (int j=0; j<5; j++) {
+
                         cout << "Enter old password to confirm : ";
                         cin >> checkPassword;
 
@@ -297,7 +300,12 @@ int main() {
                         {
                             cout << "Set new Passowrd : ";
                             cin >> password;
+                            break;
                         }
+                        else { cout << "Incorrect password, try again."<<endl << 4-j <<" tries left."<<endl<<endl; 
+                        continue;}
+
+                        } //closing for of checking password
                     accounts[i].setPassword(password);
                     break;
                     }
@@ -336,7 +344,7 @@ int main() {
                     else {
                         cout << "Incorrect password, try again."<<endl << 4-j <<" tries left."<<endl<<endl; 
                         continue;}
-                    }
+                    } //closing for of checking password
 
 
 
